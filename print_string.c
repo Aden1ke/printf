@@ -6,11 +6,11 @@
  */
 int print_string(char *str)
 {
-	int i, len;
+	int i = 0, len;
 
 	if (str == NULL)
 	{
-		str = "(nil)";
+		len = _printf("(null)");
 	}
 	else
 	{
