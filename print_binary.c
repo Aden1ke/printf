@@ -1,5 +1,10 @@
 #include "main.h"
 #include "stdio.h"
+/**
+ * print_binary - print an arrayof binary num
+ * @num: number to convert to binary num
+ * Return: Length of lenght
+ */
 int print_binary(int num)
 {
 	int remainder[32];

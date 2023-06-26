@@ -1,9 +1,9 @@
 #include "main.h"
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <stdio.h>
+/**
+ * print_string - Prints a string
+ * @str: The string to be printed
+ * Return: Length of string printed - 1
+ */
 int print_string(char *str)
 {
 	int i, len;
@@ -17,7 +17,7 @@ int print_string(char *str)
 		len = _strlen(str);
 		for (i = 0; i < len; i++)
 		{
-			my_putchar(str[i]);
+			_putchar(str[i]);
 		}
 	}
 	return (len);

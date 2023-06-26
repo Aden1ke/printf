@@ -1,31 +1,36 @@
 #include <unistd.h>
+#include <string.h>
 #include <stdlib.h>
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
+/**
+ * _printf - Prints to the standard output like a stardard printf
+ * @format: The string to be printed adn its format specifiers
+ *  Return: Length of the string
+ */
 int _printf(const char *format, ...)
 {
-	int len = strlen(format);
 	int i = 0, count = 0;
 	va_list my_args;
 	va_start(my_args, format);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 		{
-			my_putchar(format[i]);
+			_putchar(format[i]);
 		}
 		else
 		{
-			++i;
+			i++;
 			count += conversion(my_args, format[i]);
 		}
-	}
-	my_putchar('\n');
+		}
 	va_end(my_args);
 	return (count);
 }
+
 int conversion(va_list my_args, char specifiers)
 {
 	int count = 0;
@@ -33,7 +38,7 @@ int conversion(va_list my_args, char specifiers)
 	switch (specifiers)
 	{
 		case 'c':
-			count += my_putchar(va_arg(my_args, int));
+			count += _putchar(va_arg(my_args, int));
                         break;
 		case 's':
 			count += print_string(va_arg(my_args, char*));
@@ -42,8 +47,7 @@ int conversion(va_list my_args, char specifiers)
 			count += print_binary(va_arg(my_args, int));
 			break;
 		default:
-			count += my_putchar('%');
-			count += my_putchar(specifiers);
+			count += _putchar(specifiers);
 			break;
 	}
 	return (count);

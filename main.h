@@ -8,7 +8,7 @@ int print_binary(int num);
 int print_string(char *str);
 int _write(int fd, const void *buf, size_t count);
 int _strlen(char *s);
-int my_putchar(char n);
+int _putchar(char n);
 int conversion(va_list my_args, char specifiers);
 char *_memcpy(char *dest,const char *src, unsigned int n);
 char* rev_string(char *s);
