@@ -4,7 +4,9 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
-/**                                                * _prints_integer - prints an integer value       * @numb: Number to return
+/**
+ * _prints_integer - prints an integer value
+ * @numb: Number to return
  *
  * Return: (Lengt -1)
  */

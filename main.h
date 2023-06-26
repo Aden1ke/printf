@@ -5,6 +5,7 @@
 #include <stddef.h>
 int _printf(const char *format, ...);
 int print_binary(int num);
+int print_negative_binary(int num);
 int print_string(char *str);
 int _write(int fd, const void *buf, size_t count);
 int _strlen(char *s);
