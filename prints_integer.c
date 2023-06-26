@@ -24,7 +24,7 @@ int _prints_integer(int numb)                     {
 							  if (numb == -2147483648)
 	{
 		lengt2 += print_string("-2147483648");
-		return (lengt);
+		return (lengt2);
 	}
 							  lengt1 = numb % 10;
 	numb = numb / 10;
