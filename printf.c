@@ -24,13 +24,22 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
+			if (format[i] == '\0')
+			{
+				return (-1);
+			}
 			count += conversion(my_args, format[i]);
 		}
-		}
+	}
 	va_end(my_args);
 	return (count);
 }
-
+/**
+ * conversion - Prints to the standard output like a stardard printf
+ * @specifiers: The string to be printed adn its format specifiers
+ * @my_args: arguments
+ *  Return: Length of the string
+ */
 int conversion(va_list my_args, char specifiers)
 {
 	int count = 0;
@@ -46,7 +55,11 @@ int conversion(va_list my_args, char specifiers)
 		case 'b':
 			count += print_binary(va_arg(my_args, int));
 			break;
+		case '%':
+			count += _putchar('%');
+			break;
 		default:
+			count += _putchar('%');
 			count += _putchar(specifiers);
 			break;
 	}
