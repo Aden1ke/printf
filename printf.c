@@ -63,6 +63,11 @@ int conversion(va_list my_args, char specifiers)
 		case '%':
 			count += _putchar('%');
 			break;
+		case 'd':                                                 count += _prints_integer(va_arg(ls_args, int));
+									  break;
+		case 'i':
+			count += _prints_integer(va_arg(ls_args, int));
+			break;
 		default:
 			count += _putchar('%');
 			count += _putchar(specifiers);

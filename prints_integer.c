@@ -26,12 +26,12 @@ int _prints_integer(int numb)                     {
 		lengt += print_string("-2147483648");
 		return (lengt);
 	}
-							  val = num % 10;
-	num = num / 10;
-	if (num)
-		len += _putint(num);
-	len += _putchar(val + '0');
+							  lengt1 = numb % 10;
+	numb = numb / 10;
+	if (numb)
+		lengt2 += _prints_integer(numb);
+	lengt2 += _putchar(lengt1 + '0');
 
-	return (len);
+	return (lengt2);
 }
 

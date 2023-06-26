@@ -12,7 +12,5 @@ int _putchar(char n);
 int conversion(va_list my_args, char specifiers);
 char *_memcpy(char *dest, const char *src, unsigned int n);
 char *rev_string(char *s);
-char *intascii(long int numb, int base);
-int _print_integer(va_list numb);
-int printc(char *sstri);
+int _prints_integer(int numb);
 #endif
