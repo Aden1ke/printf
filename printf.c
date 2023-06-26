@@ -46,6 +46,12 @@ int conversion(va_list my_args, char specifiers)
 		case 'b':
 			count += print_binary(va_arg(my_args, int));
 			break;
+		case 'd':
+			count += _print_integer(va_arg(numb, int));
+			break;
+		case 'i':
+			count += _print_integer(va_arg(numb, int));
+			break;	
 		default:
 			count += _putchar(specifiers);
 			break;
