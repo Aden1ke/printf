@@ -30,7 +30,7 @@ int print_binary(int num)
 	{
 		char digit = remainder[j] + '0';
 
-		_write(1, &digit, 1);
+		_putchar(digit);
 		count++;
 	}
 	return (count);
