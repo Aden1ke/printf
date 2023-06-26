@@ -18,7 +18,7 @@ int print_binary(int num)
 	}
 	else
 	{
-		while(num != 0)
+		while (num != 0)
 		{
 			remainder[i] = num % 2;
 			store = num / 2;
@@ -29,6 +29,7 @@ int print_binary(int num)
 	for (j = i - 1; j >= 0; j--)
 	{
 		char digit = remainder[j] + '0';
+
 		_write(1, &digit, 1);
 		count++;
 	}

@@ -2,8 +2,7 @@
 #include <unistd.h>
 /**
  * _putchar - writes the character c to stdout
- * @c: The character to print
- *
+ * @n: The character to print
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -18,7 +17,7 @@ int _putchar(char n)
  * @n: size of bytes to copy
  * Return: Always 0.
  */
-char *_memcpy(char *dest,const char *src, unsigned int n)
+char *_memcpy(char *dest, const char *src, unsigned int n)
 {
 	unsigned int i;
 
@@ -28,6 +27,13 @@ char *_memcpy(char *dest,const char *src, unsigned int n)
 	}
 	return (dest);
 }
+/**
+ * _write - prints arguments passed to it
+ * @fd: The file descriptor on which the data should be written
+ * @buf: A pointer to the buffer that contains the data to be written.
+ * @count: The number of bytes to be written from the buffer.
+ * Return: bytes_written:amount of bytes printed.
+ */
 int _write(int fd, const void *buf, size_t count)
 {
 	ssize_t bytes_written;
