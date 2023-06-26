@@ -15,12 +15,15 @@ int _printf(const char *format, ...)
 	va_list my_args;
 
 	va_start(my_args, format);
-
-	for (i = 0; format[i] != '\0'; i++)
+	if (!format)
+	{
+		return (-1);
+	}
+	while (format[i])
 	{
 		if (format[i] != '%')
 		{
-			_putchar(format[i]);
+			count += _putchar(format[i]);
 		}
 		else
 		{
@@ -31,6 +34,7 @@ int _printf(const char *format, ...)
 			}
 			count += conversion(my_args, format[i]);
 		}
+		i++;
 	}
 	va_end(my_args);
 	return (count);
