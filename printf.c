@@ -69,4 +69,4 @@ int conversion(va_list my_args, char specifiers)
 			break;
 	}
 	return (count);
-
+}
