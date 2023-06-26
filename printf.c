@@ -55,7 +55,7 @@ int conversion(va_list my_args, char specifiers)
 			count += _putchar(va_arg(my_args, int));
 			break;
 		case 's':
-			count += print_string(va_arg(my_args, char*));
+			count += print_string(va_arg(my_args, char *));
 			break;
 		case 'b':
 			count += print_binary(va_arg(my_args, int));
