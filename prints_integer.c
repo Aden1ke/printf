@@ -23,7 +23,7 @@ int _prints_integer(int numb)                     {
 	}
 							  if (numb == -2147483648)
 	{
-		lengt += print_string("-2147483648");
+		lengt2 += print_string("-2147483648");
 		return (lengt);
 	}
 							  lengt1 = numb % 10;
