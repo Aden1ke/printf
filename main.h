@@ -16,4 +16,5 @@ char *_memcpy(char *dest, const char *src, unsigned int n);
 char *rev_string(char *s);
 int _prints_integer(int numb);
 int print_val_pointer(const void *ptr);
+int printstr(char *str);
 #endif

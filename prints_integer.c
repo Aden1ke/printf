@@ -5,6 +5,32 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
+ * printstr - Print a string
+ * @str:Strings
+ *
+ * Return: (Lengt - 1)
+ */
+int printstr(char *str)
+{
+	int i;
+
+	i = 0;
+
+	if (str == NULL)
+		i = printstr("(null)");
+	else
+	{
+		while (str[i])
+		{
+			_putchar(str[i]);
+			i++;
+		}
+	}
+
+	return (i);
+}
+
+/**
  * _prints_integer - prints an integer value
  * @numb: Number to return
  *
@@ -27,7 +53,7 @@ int _prints_integer(int numb)
 	}
 	if (numb == _INTMIN)
 	{
-		lengt2 += print_string("-2147483648");
+		lengt2 += printstr("-2147483648");
 		return (lengt2);
 	}
 	lengt1 = numb % 10;
