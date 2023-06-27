@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _prints_unsigned - prints unsigned number
+ * _prints_unsign - prints unsigned number
  * @numb: Number
  *
  * Return: (Lengt - 1)
  */
-int _prints_unsigned(unsigned int numb)
+int _prints_unsign(unsigned int numb)
 {
 	int lengt1 = 0;
 	unsigned int lengt2;
