@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#define _INT_MIN (1 << (sizeof(int) * 8 - 1))
+#define _INT_MIN (-2147483648)
 
 int _printf(const char *format, ...);
 int print_binary(unsigned int num);
