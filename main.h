@@ -1,9 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-#include <stdarg.h>
+#include <unistd.h>
 #include <stddef.h>
 #include <stdlib.h>
+
+#define _INT_MIN (1 << (sizeof(int) * 8 - 1))
 
 int _printf(const char *format, ...);
 int print_binary(unsigned int num);
