@@ -22,4 +22,5 @@ int _prints_unsign(unsigned int num);
 int _prints_octal(unsigned int num);
 int _prints_hex(unsigned int numb, char value);
 int _prints_nospace(char *str);
+int _nospace(int numb);
 #endif
