@@ -8,15 +8,14 @@
  */
 int _prints_integer(int numb)
 {
-	int lengt1 = 0;
-	int lengt2 = 0;
+	int lengt1, lengt2 = 0;
 
 	if (!numb)
 	{
 		lengt2 += _putchar('0');
 		return (lengt2);
 	}
-	if (numb <= -1)
+	if (numb < 0)
 	{
 		lengt2 += _putchar('-');
 		numb = -numb;
