@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdlib.h>
-#define _INTMIN (1 << (sizeof(int) * 8 - 1))
+
 int _printf(const char *format, ...);
 int print_binary(unsigned int num);
 int print_string(char *str);
@@ -16,5 +16,4 @@ char *_memcpy(char *dest, const char *src, unsigned int n);
 char *rev_string(char *s);
 int _prints_integer(int numb);
 int print_val_pointer(const void *ptr);
-int printstr(char *str);
 #endif
