@@ -11,7 +11,7 @@ int _prints_unsign(unsigned int numb)
 	int lengt1 = 0;
 	unsigned int lengt2;
 
-	if (numb == NULL)
+	if (!numb)
 	{
 		lengt1 += _putchar('0');
 		return (lengt1);
