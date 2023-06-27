@@ -73,7 +73,7 @@ int conversion(va_list my_args, char specifiers)
 			count += print_val_pointer(va_arg(my_args, void *));
 			break;
 		case 'u':
-                        count += _prints_unsign(va_arg(my_args, int));
+			count += _prints_unsign(va_arg(my_args, int));
 			break;
 		case 'o':
 			count += _prints_octal(va_arg(my_args, int));
@@ -84,6 +84,12 @@ int conversion(va_list my_args, char specifiers)
 			break;
 		case 'S':
 			count += _prints_nospace(va_arg(my_args, char *));
+			break;
+		case 'l':
+			count += print_length(va_arg(my_args, long));
+			break;
+		case 'h':
+			count += print_height(va_arg(my_args, int));
 			break;
 		default:
 			count += _putchar('%');
