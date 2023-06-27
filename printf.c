@@ -82,6 +82,9 @@ int conversion(va_list my_args, char specifiers)
 		case 'X':
 			count += _prints_hex(va_arg(my_args, int), specifiers);
 			break;
+		case 'S':
+			count += _prints_nospace(va_arg(my_args, char *));
+			break;
 		default:
 			count += _putchar('%');
 			count += _putchar(specifiers);
