@@ -15,16 +15,15 @@ int _prints_integer(int numb)
 		lengt2 += _putchar('0');
 		return (lengt2);
 	}
+	if (numb == -2147483648)                          {
+                lengt2 += print_string("-2147483648");
+                return (lengt2);                          }
 	if (numb < 0)
 	{
 		lengt2 += _putchar('-');
 		numb = -numb;
 	}
-	if (numb == -2147483648)
-	{
-		lengt2 += print_string("-2147483648");
-		return (lengt2);
-	}
+	
 	lengt1 = numb % 10;
 	numb = numb / 10;
 	if (numb)
