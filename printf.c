@@ -72,6 +72,16 @@ int conversion(va_list my_args, char specifiers)
 		case 'p':
 			count += print_val_pointer(va_arg(my_args, void *));
 			break;
+		case 'u':
+                        count += _prints_unsign(va_arg(my_args, int));
+			break;
+		case 'o':
+			count += _prints_octal(va_arg(my_args, int));
+			break;
+		case 'x':
+		case 'X':
+			count += _prints_hex(va_arg(my_args, int), specifiers);
+			break;
 		default:
 			count += _putchar('%');
 			count += _putchar(specifiers);
