@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+#define _INTMIN (-2147483648)
 int _printf(const char *format, ...);
 int print_binary(unsigned int num);
 int print_string(char *str);
@@ -15,5 +16,5 @@ int conversion(va_list my_args, char specifiers);
 char *_memcpy(char *dest, const char *src, unsigned int n);
 char *rev_string(char *s);
 int _prints_integer(int numb);
-int print_val_pointer(const void *ptr);
+ print_val_pointer(const void *ptr);
 #endif

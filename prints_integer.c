@@ -1,9 +1,4 @@
-#include <unistd.h>
-#include <string.h>
-#include <stdlib.h>
 #include "main.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 /**
  * _prints_integer - prints an integer value
