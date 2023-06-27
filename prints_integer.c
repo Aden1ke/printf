@@ -25,7 +25,7 @@ int _prints_integer(int numb)
 		lengt2 += _putchar('-');
 		numb = -numb;
 	}
-	if (numb == -2147483648)
+	if (numb == int_min)
 	{
 		lengt2 += print_string("-2147483648");
 		return (lengt2);

@@ -3,6 +3,8 @@
 #include <stdarg.h>
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdlib.h>
+#define int_min (1 << (sizeof(int) * 8 (- 1)))
 int _printf(const char *format, ...);
 int print_binary(unsigned int num);
 int print_string(char *str);
