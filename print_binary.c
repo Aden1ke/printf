@@ -15,6 +15,7 @@ int print_binary(unsigned int num)
 	if (num == 0)
 	{
 		printf("0");
+		return (1);
 	}
 	else
 	{
