@@ -49,60 +49,34 @@ int conversion(va_list my_args, char specifiers)
 {
 	int count = 0;
 
-	switch (specifiers)
+	if (specifiers == 'c')
+		count += _putchar(va_arg(my_args, int));
+	else if (specifiers == 's')
+		count += print_string(va_arg(my_args, char *));
+	else if (specifiers == 'b')
+		count += print_binary(va_arg(my_args, int));
+	else if (specifiers == '%')
+		count += _putchar('%');
+	else if (specifiers == 'd' || specifiers == 'i')
+		count += _prints_integer(va_arg(my_args, int));
+	else if (specifiers == 'p')
+		count += print_val_pointer(va_arg(my_args, void *));
+	else if (specifiers == 'u')
+		count += _prints_unsign(va_arg(my_args, int));
+	else if (specifiers == 'o')
+		count += _prints_octal(va_arg(my_args, int));
+	else if (specifiers == 'x' || specifiers == 'X')
+		count += _prints_hex(va_arg(my_args, int), specifiers);
+	else if (specifiers == 'S')
+		count += _prints_nospace(va_arg(my_args, char *));
+	else if (specifiers == 'l')
+		count += print_length(va_arg(my_args, long));
+	else if (specifiers == 'h')
+		count += print_length(va_arg(my_args, int));
+	else
 	{
-		case 'c':
-			count += _putchar(va_arg(my_args, int));
-			break;
-		case 's':
-			count += print_string(va_arg(my_args, char *));
-			break;
-		case 'b':
-			count += print_binary(va_arg(my_args, int));
-			break;
-		case '%':
-			count += _putchar('%');
-			break;
-		case 'd':
-		case 'i':
-			if (specifiers == 'l')
-				count += print_length(va_arg(my_args, long));
-			else if (specifiers == 'h')
-				count += print_length(va_arg(my_args, int));
-			count += _prints_integer(va_arg(my_args, int));
-			break;
-		case 'p':
-			count += print_val_pointer(va_arg(my_args, void *));
-			break;
-		case 'u' :
-			if (specifiers == 'l')
-				count += print_length(va_arg(my_args, unsigned long));
-			else if (specifiers == 'h')
-				count += print_length(va_arg(my_args, unsigned int));
-			count += _prints_unsign(va_arg(my_args, int));
-			break;
-		case 'o':
-			if (specifiers == 'l')
-				count += print_length(va_arg(my_args, unsigned long));
-			else if (specifiers == 'h')
-				count += print_length(va_arg(my_args, unsigned int));
-			count += _prints_octal(va_arg(my_args, int));
-			break;
-		case 'x':
-		case 'X':
-			if (specifiers == 'l')
-				count +=print_length(va_arg(my_args, unsigned long));
-			else if (specifiers == 'h')
-				count += print_length(va_arg(my_args, unsigned int));
-			count += _prints_hex(va_arg(my_args, int), specifiers);
-			break;
-		case 'S':
-			count += _prints_nospace(va_arg(my_args, char *));
-			break;
-		default:
-			count += _putchar('%');
-			count += _putchar(specifiers);
-			break;
+		count += _putchar('%');
+		count += _putchar(specifiers);
 	}
 	return (count);
 }

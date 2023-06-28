@@ -23,6 +23,6 @@ int _prints_octal(unsigned int num);
 int _prints_hex(unsigned int numb, char value);
 int _prints_nospace(char *str);
 int _nospace(int numb);
-int print_length(void *num);
-int print_height(void *num);
+int print_length(long num);
+int print_height(short num);
 #endif
