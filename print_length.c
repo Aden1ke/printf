@@ -5,7 +5,7 @@
  * @num: number to print
  * Return: Length of lenght
  */
-int print_length(long num)
+int print_length(void *num)
 {
 	int buffer[20];
 	int count = 0, i = 0;
@@ -35,7 +35,7 @@ int print_length(long num)
  * @num: number to print
  * Return: Length of lenght
  */
-int print_height(short num)
+int print_height(void *num)
 {
 	int buffer[10];
 	int count = 0, i = 0;
