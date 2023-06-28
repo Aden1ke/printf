@@ -65,9 +65,9 @@ int conversion(va_list my_args, char specifiers)
 			break;
 		case 'd':
 		case 'i':
-			if (specifier == 'l')
+			if (specifiers == 'l')
 				count += print_length(va_arg(my_args, long));
-			else if (specifier == 'h')
+			else if (specifiers == 'h')
 				count += print_length(va_arg(my_args, int));
 			count += _prints_integer(va_arg(my_args, int));
 			break;
@@ -75,24 +75,24 @@ int conversion(va_list my_args, char specifiers)
 			count += print_val_pointer(va_arg(my_args, void *));
 			break;
 		case 'u' :
-			if (specifier == 'l')
+			if (specifiers == 'l')
 				count += print_length(va_arg(my_args, unsigned long));
-			else if (specifier == 'h')
+			else if (specifiers == 'h')
 				count += print_length(va_arg(my_args, unsigned int));
 			count += _prints_unsign(va_arg(my_args, int));
 			break;
 		case 'o':
-			if (specifier == 'l')
+			if (specifiers == 'l')
 				count += print_length(va_arg(my_args, unsigned long));
-			else if (specifier == 'h')
+			else if (specifiers == 'h')
 				count += print_length(va_arg(my_args, unsigned int));
 			count += _prints_octal(va_arg(my_args, int));
 			break;
 		case 'x':
 		case 'X':
-			if (specifier == 'l')
+			if (specifiers == 'l')
 				count +=print_length(va_arg(my_args, unsigned long));
-			else if (specifier == 'h')
+			else if (specifiers == 'h')
 				count += print_length(va_arg(my_args, unsigned int));
 			count += _prints_hex(va_arg(my_args, int), specifiers);
 			break;
