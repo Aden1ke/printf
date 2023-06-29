@@ -17,6 +17,11 @@ int print_length(long num)
 	}
 	else
 	{
+		if (num < 0)
+		{
+			count += _putchar('-');
+			num = -num;
+		}
 		while (num != 0)
 		{
 			buffer[i] = num % 10;
@@ -35,7 +40,7 @@ int print_length(long num)
  * @num: number to print
  * Return: Length of lenght
  */
-int print_height(short num)
+int print_height(int num)
 {
 	int buffer[10];
 	int count = 0, i = 0;
