@@ -12,6 +12,7 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, count = 0;
+	char flag;
 	va_list my_args;
 
 	va_start(my_args, format);
@@ -31,6 +32,12 @@ int _printf(const char *format, ...)
 			if (!format[i])
 			{
 				return (-1);
+			}
+			if (format[i] == '+' || format[i] == ' ' || format[i] == '#')
+			{
+				flag = format[i];
+				i++;
+				count += _flag_handler(my_args, flag, format[i]);
 			}
 			count += conversion(my_args, format[i]);
 		}
