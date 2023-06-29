@@ -28,4 +28,5 @@ int print_height(short num);
 int _prints_plus(int numb, char value);
 int _prints_space(int numb, char value);
 int _prints_hash(unsigned int numb, char value);
+int _flag_handler(va_list my_args, char value1, char value2);
 #endif
