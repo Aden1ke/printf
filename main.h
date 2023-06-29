@@ -25,6 +25,8 @@ int _prints_nospace(char *str);
 int _nospace(int numb);
 int print_length(long num);
 int print_height(int num);
+int length_modifiers(va_list my_args, const char *format, int *i);
+int height_modifiers(va_list my_args, const char *format, int *i);
 int _prints_plus(int numb, char value);
 int _prints_space(int numb, char value);
 int _prints_hash(unsigned int numb, char value);
