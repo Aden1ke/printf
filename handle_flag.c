@@ -14,7 +14,7 @@ int _prints_plus(int numb, char value)
 	{
 		if (numb > -1)
 			lengt += _putchar('+');
-		lengt += _prints_integer(num);
+		lengt += _prints_integer(numb);
 	}
 	else if (value == 'u')
 		lengt += _prints_unsign(numb);
