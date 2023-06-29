@@ -25,4 +25,7 @@ int _prints_nospace(char *str);
 int _nospace(int numb);
 int print_length(long num);
 int print_height(short num);
+int _prints_plus(int numb, char value);
+int _prints_space(int numb, char value);
+int _prints_hash(unsigned int numb, char value);
 #endif
