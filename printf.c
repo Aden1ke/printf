@@ -39,6 +39,7 @@ int _printf(const char *format, ...)
 				i++;
 				count += _flag_handler(my_args, flag, format[i]);
 			}
+			else
 			count += conversion(my_args, format[i]);
 		}
 		i++;
